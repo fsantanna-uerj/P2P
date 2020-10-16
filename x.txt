@@ -1,0 +1,117 @@
+- https://www.youtube.com/watch?v=BCksQYqU5ok&list=WL&index=27&t=3339s
+
+- Decentralized
+    - Napster 1st, shutdown by copyright
+    - FreeNET, anonymous storing sharing of info
+    - SETI@Home, contribute computing resources
+
+- Hype Cycle
+    - 1st wave, early 2000s
+    - What can we do?
+    - Problems are hard in a very decentralized setting
+    - Readjust expectations
+
+- New Wave 2010?
+
+- Agenda
+    - Decentralized Systems I
+        - overlays, consistent hashing, key-based routing
+        - shared state (dhts)
+        - group commuication
+    - Decentralized Systems II
+        - consistency, malicious participants, massive failures
+        - real apps: skype, bittorrent, netsesion, dynami
+        - benefits, limitations, challenges
+    - Accountability for distributed systems
+        - what is accountability and why is it needed?
+        - how can we implement it?
+        - how well does it work?
+
+- Distributed system
+    - symmetric componentes
+    - decentralized control and state
+    - self organization
+    = Promise
+        - organic growth, elaticity
+        - resilience to faults, attack
+        - low barrier to deploy
+        - resource abundance, diversity
+
+- DEPLOyMENT
+    - overlay networks (internet connected devices)
+        - logical network on top of internet (typical in P2P / federated)
+    - data centers (servers)
+    - ad-hoc wireless, sensor, delay-tolerant networks (mobile, wireless, intermittently conn devices)
+
+- OVERLAY
+    - logical links / logical edges
+        - it means that nodes know each others IPs (and the logical ID)
+        - use internet routing for actual connectivity
+    - topology: structured or unstructured
+        - structured
+        - unstructued
+
+- STATE
+    - without that, not interesting
+        - may just conversion / pure functions
+        - how even to provide "user preferences" in a distributed setting?
+    - how to provide state within it?
+        - partly decentralized system
+            - whatsapp?
+            - foto 1
+            - leader election to decide controller
+                - nodes need to know who is the controller to know the state
+                    - read/write
+            - controller fail: new election, update everything again
+            - replicated state machines
+            - but would like to be the controller (unless you earn from it, e.g. wsapp)
+        - fully decentralized
+            - how to find data?
+            - overlay (map ID/IP) is not sufficient b/c I don't know exactly who to ask
+            - address state object, not nodes
+                - content-addressed data
+            - DHT
+                - same as HT: tuple (key,value)
+                - insert(key,value), loop(key), delete(key)
+                - HT is in-memory data structure, how to do DHT?
+                - partition data across nodes + replication for reliability
+                    - dynamic partition
+                - LOOKUP? key-based overlay routing
+                ---
+                - Consistent hashing
+                    - circular set of keys
+                    - unique ID for each node in the network
+                        - mac address / IP address -> hash it
+                        - uniformely distributed in the set of keys
+                    - same with data objects
+                        - hash its contents
+                    - both nodes and data are uniformelly distributed in the key space
+                    - node that holds data is the one numerically closest to data hash
+                    - both nodes and data hash to the same M space
+                        - add/rem nodes only affect neighbours
+--- how do I know which nodes are in the network to know which one is closer to the data?
+                - Routing
+                    - node id prefix
+                    - key-based routing KBR
+                    - log(n) hops
+                    - "small diameter"
+                - requires to know your neighbours
+                    - isso responde a minha pergunta de que um nó exatamente
+                      correspondente a uma chave deveria estar online.
+                      não. basta um neighbour que tenha o dado.
+                      o roteamento vai esbarrar nesse neighbour
+                    - keep-alive messages periodic
+                - VER PASTRY??
+
+
+
+
+- Centralization / Decentralization
+    - CONTROL
+- Distributed
+    - LOCATION
+
+
+
+- DHT
+
