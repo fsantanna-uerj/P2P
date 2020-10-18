@@ -1,5 +1,20 @@
 - https://www.youtube.com/watch?v=BCksQYqU5ok&list=WL&index=27&t=3339s
 
+- NETWORK REQUEST
+    - get specific file         (ftp, http)
+    - send message to user      (email, wsapp)
+    - search query              (google, find friend)
+    - compute something         (convert file, parallelize computation)
+    - broadcast data            (live stream, social timeline)
+
+- A diferença é basicamente não dizer onde.
+    - location vs content based
+- Espaço global de identificaçào
+
+STORE   ftp://ftp.pel.uerj.br/horario-2020-2.pdf
+GET     https://www.pel.uerj.br/Ementa_PEL_Redes_de_Computadores.pdf
+RCPT TO francisco@pel.uerj.br <corpo do e-mail>
+
 - Decentralized
     - Napster 1st, shutdown by copyright
     - FreeNET, anonymous storing sharing of info
