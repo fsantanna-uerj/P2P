@@ -11,9 +11,19 @@
     - location vs content based
 - Espaço global de identificaçào
 
-STORE   ftp://ftp.pel.uerj.br/horario-2020-2.pdf
-GET     https://www.pel.uerj.br/Ementa_PEL_Redes_de_Computadores.pdf
+https://www.youtube.com/watch?v=6PWUCFmOQwQ
+
+STOR   ftp://ftp.pel.uerj.br/horario-2020-2.pdf
+GET    https://www.pel.uerj.br/Ementa_PEL_Redes_de_Computadores.pdf
 RCPT TO francisco@pel.uerj.br <corpo do e-mail>
+
+- Topologia
+    - IP: hierárquico, centralizado
+    - P2P
+        - nao estruturado
+            - F2F
+            - broadcast
+        - estruturado
 
 - Decentralized
     - Napster 1st, shutdown by copyright
